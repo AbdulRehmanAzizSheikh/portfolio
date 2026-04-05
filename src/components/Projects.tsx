@@ -15,6 +15,16 @@ export default function Projects() {
       live: "https://smitposthubsupabase.vercel.app/",
       color: "purple",
     },
+    {
+      title: "E-Commerce App",
+      isLogoTitle: false,
+      description:
+        "A complete e-commerce website featuring a shopping cart and user functionality like login/signup utilizing localStorage. New products can be added via the /addProduct route.",
+      tech: ["React", "CSS 3", "localStorage"],
+      github: "https://github.com/AbdulRehmanAzizSheikh/smitECommerceWebReact",
+      live: "https://smitecommercewebreact.vercel.app/",
+      color: "cyan",
+    },
   ];
 
   return (
