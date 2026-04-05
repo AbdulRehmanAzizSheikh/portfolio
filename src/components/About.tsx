@@ -42,14 +42,18 @@ export default function About() {
               <div className="absolute inset-0 border-2 border-transparent group-hover:border-neon-purple transition-colors duration-500 rounded-2xl z-0"></div>
               <div className="relative z-10 flex flex-col space-y-6">
                 <div className="w-32 h-32 mx-auto bg-gradient-to-tr from-neon-purple to-neon-cyan rounded-full p-1 shadow-[0_0_20px_#A855F7]">
-                  <div className="w-full h-full bg-card-bg rounded-full flex items-center justify-center">
-                    <User className="h-16 w-16 text-foreground" />
-                  </div>
+                  <img
+                    src="https://lh3.googleusercontent.com/a/ACg8ocKl3xgY_YRY2iVCxoDhmM-jL5lLiS2po3QRLnzTnNwQTzoE8cZqijcyzw4lB2QpwXXCOePDyPHmskBSc8Z-1Tv7OOIuqHg=s288-c-no"
+                    className="w-100 text-foreground rounded-full"
+                    alt="Profile"
+                  />
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3 text-text-secondary">
                     <User className="h-5 w-5 text-neon-purple" />
-                    <span className="font-medium text-foreground">Abdul Rehman Aziz Sheikh</span>
+                    <span className="font-medium text-foreground">
+                      Abdul Rehman Aziz Sheikh
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3 text-text-secondary">
                     <Code2 className="h-5 w-5 text-neon-cyan" />
@@ -61,7 +65,9 @@ export default function About() {
                   </div>
                   <div className="flex items-center space-x-3 text-text-secondary">
                     <Mail className="h-5 w-5 text-neon-cyan" />
-                    <span className="truncate">abdulrehmanazizsheikh@gmail.com</span>
+                    <span className="truncate">
+                      abdulrehmanazizsheikh@gmail.com
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3 text-text-secondary">
                     <Phone className="h-5 w-5 text-neon-purple" />
@@ -83,22 +89,29 @@ export default function About() {
             <div className="space-y-6">
               <div className="space-y-4">
                 <p className="text-text-secondary text-sm sm:text-base md:text-lg leading-relaxed">
-                  Motivated IT professional with core experience in web development. Currently enrolled in Modern Web Application Development at SMIT (Saylani Mass IT Training), Karachi.
+                  Motivated IT professional with core experience in web
+                  development. Currently enrolled in Modern Web Application
+                  Development at SMIT (Saylani Mass IT Training), Karachi.
                 </p>
                 <p className="text-text-secondary text-sm sm:text-base md:text-lg leading-relaxed">
-                  I am a quick learner with strong problem-solving and teamwork skills, passionate about building modern, scalable web applications and continuously improving my development skills.
+                  I am a quick learner with strong problem-solving and teamwork
+                  skills, passionate about building modern, scalable web
+                  applications and continuously improving my development skills.
                 </p>
               </div>
-              
+
               <div className="p-4 rounded-lg bg-neon-cyan/5 border border-neon-cyan/20 inline-block shadow-[0_0_15px_rgba(0,255,255,0.1)]">
                 <p className="text-foreground font-medium flex items-center">
                   <span className="w-2 h-2 rounded-full bg-neon-cyan mr-3 animate-pulse"></span>
-                  Currently learning the MERN Stack (MongoDB, Express, React, Node.js)
+                  Currently learning the MERN Stack (MongoDB, Express, React,
+                  Node.js)
                 </p>
               </div>
 
               <div className="pt-6 border-t border-white/5 mt-6">
-                <h3 className="text-xl font-semibold mb-4 text-foreground">Soft Skills</h3>
+                <h3 className="text-xl font-semibold mb-4 text-foreground">
+                  Soft Skills
+                </h3>
                 <div className="flex flex-wrap gap-3">
                   {softSkills.map((skill, index) => (
                     <motion.span
