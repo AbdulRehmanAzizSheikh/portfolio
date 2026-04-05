@@ -42,7 +42,7 @@ export default function Education() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold mb-4 tracking-tight leading-tight px-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 tracking-tight leading-tight px-4">
             Education & <span className="neon-text-cyan">Certifications</span>
           </h2>
           <div className="w-16 sm:w-20 h-1.5 bg-gradient-to-r from-neon-cyan to-neon-purple mx-auto rounded-full neon-glow-cyan shadow-[0_0_15px_rgba(0,255,255,0.5)]"></div>
