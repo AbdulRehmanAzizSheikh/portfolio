@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #0a0a0a;
+  --color-foreground: #F1F1F1;
+  --color-neon-cyan: #00FFFF;
+  --color-neon-purple: #A855F7;
+  --color-card-bg: #111111;
+  --color-text-secondary: #A0A0A0;
+  --font-sans: var(--font-inter);
+}
+
+@layer utilities {
+  .neon-glow-cyan {
+    box-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF;
+  }
+  .neon-glow-cyan-hover:hover {
+    box-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF;
+  }
+  .neon-glow-purple-hover:hover {
+    box-shadow: 0 0 10px #A855F7, 0 0 20px #A855F7;
+  }
+  .neon-text-cyan {
+    text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF;
+  }
+  .neon-text-purple {
+    text-shadow: 0 0 10px #A855F7, 0 0 20px #A855F7;
+  }
+  
+  .glassmorphism {
+    background: rgba(17, 17, 17, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+body {
+  overflow-x: hidden;
+}
