@@ -15,6 +15,7 @@ const navLinks = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +26,30 @@ export default function Navbar() {
       }
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    const sections = document.querySelectorAll("section[id]");
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      sections.forEach((section) => observer.unobserve(section));
+    };
   }, []);
 
   return (
@@ -49,15 +73,22 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-text-secondary hover:text-neon-cyan hover:neon-text-cyan transition-colors duration-300 font-medium"
-              >
-                {link.name}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.href.substring(1);
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className={`transition-all duration-300 font-medium ${
+                    isActive
+                      ? "text-neon-cyan neon-text-cyan border-b-2 border-neon-cyan pb-1"
+                      : "text-text-secondary hover:text-neon-cyan hover:neon-text-cyan"
+                  }`}
+                >
+                  {link.name}
+                </a>
+              );
+            })}
           </div>
 
           {/* Mobile Menu Button */}
@@ -80,16 +111,23 @@ export default function Navbar() {
           exit={{ opacity: 0, height: 0 }}
           className="md:hidden glassmorphism mt-2 pb-4 px-4 space-y-2 rounded-b-xl"
         >
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="block px-3 py-2 text-base font-medium text-text-secondary hover:text-neon-cyan hover:neon-text-cyan transition-colors"
-            >
-              {link.name}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = activeSection === link.href.substring(1);
+            return (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className={`block px-3 py-2 text-base font-medium transition-colors ${
+                  isActive
+                    ? "text-neon-cyan neon-text-cyan border-l-4 border-neon-cyan pl-2 bg-white/5"
+                    : "text-text-secondary hover:text-neon-cyan hover:neon-text-cyan"
+                }`}
+              >
+                {link.name}
+              </a>
+            );
+          })}
         </motion.div>
       )}
     </motion.nav>
