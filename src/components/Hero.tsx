@@ -5,9 +5,14 @@ import { CodeXml, Briefcase, Mail, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const roles = [
+  "Web Developer",
+  "Full Stack Developer",
   "MERN Stack Developer",
   "React Developer",
-  "Frontend Developer",
+  "Next.js Developer",
+  "Node.js Developer",
+  "Express.js Developer",
+  "MongoDB Developer",
 ];
 
 export default function Hero() {
@@ -24,7 +29,7 @@ export default function Hero() {
       setText(
         isDeleting
           ? fullText.substring(0, text.length - 1)
-          : fullText.substring(0, text.length + 1)
+          : fullText.substring(0, text.length + 1),
       );
 
       setTypingSpeed(isDeleting ? 50 : 150);
@@ -42,7 +47,7 @@ export default function Hero() {
     }, typingSpeed);
 
     return () => clearTimeout(ticker);
-  }, [text, isDeleting, loopNum, typingSpeed, roles]);
+  }, [text, isDeleting, loopNum, typingSpeed]);
 
   return (
     <section
@@ -51,7 +56,7 @@ export default function Hero() {
     >
       {/* Background Particles/Grid Effect */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-      
+
       {/* Dark Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background hidden md:block"></div>
       <div className="absolute inset-0 flex justify-center items-center">
@@ -65,14 +70,16 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="text-neon-cyan font-mono mb-4 block">Hi, my name is</span>
+          <span className="text-neon-cyan font-mono mb-4 block">
+            Hi, my name is
+          </span>
         </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tight text-foreground"
+          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tight text-foreground"
         >
           <span className="neon-text-cyan hover:text-white transition-colors duration-300">
             Abdul Rehman
@@ -83,9 +90,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="h-16 md:h-20 mb-8"
+          className="min-h-[4rem] md:h-20 mb-8 flex items-center justify-center"
         >
-          <h2 className="text-2xl md:text-4xl font-bold text-text-secondary">
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-text-secondary">
             I am a{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-neon-purple">
               {text}
@@ -98,9 +105,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="max-w-2xl text-text-secondary md:text-lg mb-10"
+          className="max-w-2xl text-text-secondary text-base sm:text-lg mb-10 px-4"
         >
-          I build modern web applications. Currently focused on expanding my skills as a MERN Stack Developer. Exploring clean code, modern aesthetics, and performant user experiences.
+          I build modern web applications. Currently focused on expanding my
+          skills as a MERN Stack Developer. Exploring clean code, modern
+          aesthetics, and performant user experiences.
         </motion.p>
 
         <motion.div
@@ -116,7 +125,6 @@ export default function Hero() {
             View Projects
             <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </a>
-
         </motion.div>
 
         <motion.div

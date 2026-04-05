@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -61,7 +61,7 @@ export default function Navbar() {
         scrolled ? "glassmorphism py-4" : "bg-transparent py-6"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-8 sm:px-10 lg:px-12">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
             <a href="#home" className="text-3xl font-bold text-foreground neon-text-cyan flex items-center">

@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-[#0a0a0a] selection:bg-neon-cyan/30 selection:text-white">
       <Navbar />
-      <Hero />
+      <Hero key="hero-v1" />
       <About />
       <Skills />
       <Projects />

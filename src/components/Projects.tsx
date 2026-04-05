@@ -37,7 +37,7 @@ export default function Projects() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Featured <span className="neon-text-purple">Projects</span>
           </h2>
           <div className="w-20 h-1 bg-neon-purple mx-auto rounded-full neon-glow-purple"></div>
@@ -57,10 +57,10 @@ export default function Projects() {
                   : "hover:shadow-[0_0_15px_#A855F7]"
               }`}
             >
-              <div className="p-6 flex flex-col flex-grow">
+              <div className="p-5 sm:p-6 flex flex-col flex-grow">
                 {project.isLogoTitle ? (
                   <h3 className="mb-3">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A855F7] to-[#00FFFF] text-3xl font-extrabold tracking-tight">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A855F7] to-[#00FFFF] text-2xl sm:text-3xl font-extrabold tracking-tight">
                       {project.title}
                     </span>
                   </h3>

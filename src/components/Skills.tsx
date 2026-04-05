@@ -56,7 +56,7 @@ export default function Skills() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Technical <span className="neon-text-cyan">Skills</span>
           </h2>
           <div className="w-20 h-1 bg-neon-cyan mx-auto rounded-full neon-glow-cyan"></div>
@@ -73,17 +73,17 @@ export default function Skills() {
             <motion.div
               key={idx}
               variants={itemVariants}
-              className={`glassmorphism rounded-2xl p-6 group transition-all duration-500 hover:border-transparent ${
+              className={`glassmorphism rounded-2xl p-4 sm:p-6 group transition-all duration-500 hover:border-transparent ${
                 category.color === "cyan" ? "hover:shadow-[0_0_15px_#00FFFF]" : "hover:shadow-[0_0_15px_#A855F7]"
               }`}
             >
-              <div className="flex items-center space-x-4 mb-6">
-                <div className={`p-3 rounded-xl bg-card-bg shadow-inner ${
+              <div className="flex items-center space-x-3 sm:space-x-4 mb-6">
+                <div className={`p-2 sm:p-3 rounded-xl bg-card-bg shadow-inner ${
                   category.color === "cyan" ? "shadow-neon-cyan/20" : "shadow-neon-purple/20"
                 }`}>
                   {category.icon}
                 </div>
-                <h3 className={`text-xl font-semibold ${
+                <h3 className={`text-lg sm:text-xl font-semibold ${
                   category.color === "cyan" ? "group-hover:neon-text-cyan text-foreground" : "group-hover:neon-text-purple text-foreground"
                 } transition-all duration-300`}>
                   {category.title}
