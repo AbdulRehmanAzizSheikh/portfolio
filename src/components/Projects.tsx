@@ -25,6 +25,16 @@ export default function Projects() {
       live: "https://smitecommercewebreact.vercel.app/",
       color: "cyan",
     },
+    {
+      title: "Restaurant App clone",
+      isLogoTitle: false,
+      description:
+        "A complete restaurant website featuring a menu and user functionality like login/signup utilizing localStorage.",
+      tech: ["React", "CSS 3"],
+      github: "https://github.com/AbdulRehmanAzizSheikh/smitRestaurantWebReact",
+      live: "https://smitrestaurantwebreact.vercel.app/",
+      color: "orange",
+    },
   ];
 
   return (
@@ -54,7 +64,11 @@ export default function Projects() {
               className={`flex flex-col h-full bg-[#111111] border border-white/5 rounded-2xl overflow-hidden group hover:border-transparent transition-all duration-300 ${
                 project.color === "cyan"
                   ? "hover:shadow-[0_0_15px_#00FFFF]"
-                  : "hover:shadow-[0_0_15px_#A855F7]"
+                  : project.color === "orange"
+                    ? "hover:shadow-[0_0_15px_#FFA500]"
+                    : project.color === "green"
+                      ? "hover:shadow-[0_0_15px_#00FF00]"
+                      : "hover:shadow-[0_0_15px_#A855F7]"
               }`}
             >
               <div className="p-5 sm:p-6 flex flex-col flex-grow">
@@ -67,9 +81,7 @@ export default function Projects() {
                 ) : (
                   <h3
                     className={`text-2xl font-bold mb-3 text-foreground ${
-                      project.color === "cyan"
-                        ? "group-hover:text-neon-cyan"
-                        : "group-hover:text-neon-purple"
+                      project.color
                     } transition-colors`}
                   >
                     {project.title}
@@ -107,11 +119,7 @@ export default function Projects() {
                   href={project.live}
                   target="_blank"
                   rel="noreferrer"
-                  className={`flex items-center text-sm font-medium transition-colors ${
-                    project.color === "cyan"
-                      ? "text-neon-cyan hover:text-white"
-                      : "text-neon-purple hover:text-white"
-                  }`}
+                  className={`flex items-center text-sm font-medium transition-colors ${project.color}-live-demo`}
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Live Demo

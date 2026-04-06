@@ -36,6 +36,18 @@
       0 0 10px #a855f7,
       0 0 20px #a855f7;
   }
+  .orange {
+    color: #ffa600;
+    text-shadow:
+      0 0 5px #db3d3d,
+      0 0 10px #97450e;
+  }
+  .orange-live-demo {
+    color: #ffa600;
+    text-shadow:
+      0 0 5px #ffa600,
+      0 0 10px #ffa600;
+  }
 
   .glassmorphism {
     background: rgba(17, 17, 17, 0.7);
