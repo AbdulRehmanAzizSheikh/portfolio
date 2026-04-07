@@ -29,7 +29,7 @@ export default function Projects() {
       title: "Restaurant App clone",
       isLogoTitle: false,
       description:
-        "A complete restaurant website featuring a menu and user functionality like login/signup utilizing localStorage.",
+        "Javed Nihari Restaurant Website Clone App was created as an assignment",
       tech: ["React", "CSS 3"],
       github: "https://github.com/AbdulRehmanAzizSheikh/smitRestaurantWebReact",
       live: "https://smitrestaurantwebreact.vercel.app/",
