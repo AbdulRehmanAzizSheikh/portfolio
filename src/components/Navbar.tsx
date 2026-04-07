@@ -64,7 +64,10 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-8 sm:px-10 lg:px-12">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
-            <a href="#home" className="text-3xl font-bold text-foreground neon-text-cyan flex items-center">
+            <a
+              href="#home"
+              className="text-3xl font-bold text-foreground neon-text-cyan flex items-center"
+            >
               <span className="text-neon-cyan">&lt;</span>
               AR
               <span className="text-neon-cyan">/&gt;</span>
@@ -97,7 +100,11 @@ export default function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               className="text-foreground hover:text-neon-cyan focus:outline-none"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
