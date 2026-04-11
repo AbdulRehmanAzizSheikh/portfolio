@@ -9,7 +9,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Abdul Rehman - Portfolio",
-  description: "Personal Portfolio of Abdul Rehman Aziz Sheikh - MERN Stack Web Developer",
+  description:
+    "Personal Portfolio of Abdul Rehman Aziz Sheikh - MERN Stack Web Developer",
+  verification: {
+    google: "VD0exI_wvMmDCLHLKowKwTzCHyAM0oRrlH9Htx7sBYQ",
+  },
 };
 
 export default function RootLayout({
