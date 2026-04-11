@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Personal Portfolio of Abdul Rehman Aziz Sheikh - MERN Stack Web Developer",
   verification: {
-    google: "VD0exI_wvMmDCLHLKowKwTzCHyAM0oRrlH9Htx7sBYQ",
+    google: "K7YIaX3Ejkkx2GzQAzlj-a7PKs_FgycE6TdTaP2itEg",
   },
 };
 
