@@ -8,9 +8,37 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Abdul Rehman - Portfolio",
+  title: "Abdul Rehman | Full-Stack MERN Developer",
   description:
-    "Personal Portfolio of Abdul Rehman Aziz Sheikh - MERN Stack Web Developer",
+    "Professional Full-Stack Developer specializing in MERN stack. I build unique, high-performance websites with free deployment.",
+
+  // Open Graph (WhatsApp, LinkedIn, Facebook ke liye)
+  openGraph: {
+    title: "Abdul Rehman | Full-Stack MERN Developer",
+    description:
+      "Building unique & budget-friendly full-stack websites. Check out my projects!",
+    url: "https://abdulrehmanazizsheikh.vercel.app/",
+    siteName: "Abdul Rehman Portfolio",
+    images: [
+      {
+        url: "https://abdulrehmanazizsheikh.vercel.app/og-image.jpg", // Yahan apni kisi acchi image ya screenshot ka link dein
+        width: 1200,
+        height: 630,
+        alt: "Abdul Rehman Portfolio Preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  // Twitter/Discord ke liye specific tags
+  twitter: {
+    card: "summary_large_image",
+    title: "Abdul Rehman | Full-Stack MERN Developer",
+    description: "I build and deploy custom MERN stack websites.",
+    images: ["https://abdulrehmanazizsheikh.vercel.app/og-image.jpg"],
+  },
+
   verification: {
     google: "K7YIaX3Ejkkx2GzQAzlj-a7PKs_FgycE6TdTaP2itEg",
   },
