@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Professional Full-Stack Developer specializing in MERN stack. I build unique, high-performance websites with free deployment.",
 
-  // Open Graph (WhatsApp, LinkedIn, Facebook ke liye)
+  // Ye block Facebook, LinkedIn aur WhatsApp ke base layout ke liye hai
   openGraph: {
     title: "Abdul Rehman | Full-Stack MERN Developer",
     description:
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Abdul Rehman Portfolio",
     images: [
       {
-        url: "https://abdulrehmanazizsheikh.vercel.app/og-image.jpg", // Yahan apni kisi acchi image ya screenshot ka link dein
+        url: "/og-image.jpg", // Pura link dene ki bajaye sirf path dein
         width: 1200,
         height: 630,
         alt: "Abdul Rehman Portfolio Preview",
@@ -31,12 +31,12 @@ export const metadata: Metadata = {
     type: "website",
   },
 
-  // Twitter/Discord ke liye specific tags
+  // Ye block Discord aur WhatsApp ko "Bari Image" dikhane par majboor karta hai
   twitter: {
     card: "summary_large_image",
     title: "Abdul Rehman | Full-Stack MERN Developer",
     description: "I build and deploy custom MERN stack websites.",
-    images: ["https://abdulrehmanazizsheikh.vercel.app/og-image.jpg"],
+    images: ["/og-image.jpg"],
   },
 
   verification: {
