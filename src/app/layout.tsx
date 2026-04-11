@@ -21,9 +21,7 @@ export const metadata: Metadata = {
     siteName: "Abdul Rehman Portfolio",
     images: [
       {
-        url: "/og-image.jpg", // Pura link dene ki bajaye sirf path dein
-        width: 1200,
-        height: 630,
+        url: "/og-image.jpg",
         alt: "Abdul Rehman Portfolio Preview",
       },
     ],
