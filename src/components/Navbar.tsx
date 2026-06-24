@@ -68,9 +68,7 @@ export default function Navbar() {
               href="#home"
               className="text-3xl font-bold text-foreground neon-text-cyan flex items-center"
             >
-              <span className="text-neon-cyan">&lt;</span>
-              AR
-              <span className="text-neon-cyan">/&gt;</span>
+              <img className="w-10 h-10" src="favicon.ico" alt="A" />
             </a>
           </div>
 

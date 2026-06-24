@@ -40,7 +40,7 @@ export default function About() {
           >
             <div className="glassmorphism p-6 sm:p-8 rounded-2xl relative overflow-hidden group">
               <div className="absolute inset-0 border-2 border-transparent group-hover:border-neon-purple transition-colors duration-500 rounded-2xl z-0"></div>
-              <div className="relative z-10 flex flex-col space-y-6">
+              <div className="relative z-10 flex flex-col space-y-6 h-full">
                 <div className="w-32 h-32 mx-auto bg-gradient-to-tr from-neon-purple to-neon-cyan rounded-full p-1 shadow-[0_0_20px_#A855F7]">
                   <img
                     src="https://lh3.googleusercontent.com/a/ACg8ocKl3xgY_YRY2iVCxoDhmM-jL5lLiS2po3QRLnzTnNwQTzoE8cZqijcyzw4lB2QpwXXCOePDyPHmskBSc8Z-1Tv7OOIuqHg=s288-c-no"
@@ -65,7 +65,13 @@ export default function About() {
                   </div>
                   <div className="flex items-center space-x-3 text-text-secondary">
                     <Mail className="h-5 w-5 text-neon-cyan" />
-                    <span className="truncate">
+                    <span className="no-scrollbar overflow-y-scroll">
+                      contact@abdulrehman.sbs
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3 text-text-secondary">
+                    <Mail className="h-5 w-5 text-neon-cyan" />
+                    <span className="no-scrollbar overflow-y-scroll">
                       abdulrehmanazizsheikh@gmail.com
                     </span>
                   </div>
