@@ -10,6 +10,7 @@ const navLinks = [
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   { name: "Education", href: "#education" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -25,12 +26,21 @@ export default function Navbar() {
         setScrolled(false);
       }
     };
+
+    const updateSectionFromHash = () => {
+      const hash = window.location.hash.replace("#", "");
+      if (hash) {
+        setActiveSection(hash);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("hashchange", updateSectionFromHash);
 
     const observerOptions = {
       root: null,
-      rootMargin: "0px",
-      threshold: 0.5,
+      rootMargin: "-30% 0px -55% 0px",
+      threshold: 0,
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -46,8 +56,11 @@ export default function Navbar() {
       observer.observe(section);
     });
 
+    updateSectionFromHash();
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("hashchange", updateSectionFromHash);
       sections.forEach((section) => observer.unobserve(section));
     };
   }, []);
@@ -73,7 +86,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.substring(1);
               return (
@@ -90,6 +103,12 @@ export default function Navbar() {
                 </a>
               );
             })}
+            <a
+              href="#contact"
+              className="px-4 py-2 rounded-full bg-neon-cyan text-black font-semibold neon-glow-cyan-hover transition-all duration-300"
+            >
+              Contact Us
+            </a>
           </div>
 
           {/* Mobile Menu Button */}

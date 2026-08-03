@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Education from "@/components/Education";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Skills />
       <Projects />
       <Education />
+      <Contact />
 
       {/* Footer */}
       <footer className="py-8 text-center border-t border-white/5 mt-20">

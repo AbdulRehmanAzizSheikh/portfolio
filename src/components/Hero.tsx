@@ -125,6 +125,12 @@ export default function Hero() {
             View Projects
             <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </a>
+          <a
+            href="#contact"
+            className="group px-8 py-3 rounded-md bg-neon-cyan text-black font-medium flex items-center justify-center neon-glow-cyan-hover transition-all duration-300"
+          >
+            Contact Me
+          </a>
         </motion.div>
 
         <motion.div
