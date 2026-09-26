@@ -66,13 +66,13 @@ export default function About() {
                   <div className="flex items-center space-x-3 text-text-secondary">
                     <Mail className="h-5 w-5 text-neon-cyan" />
                     <span className="no-scrollbar overflow-y-scroll">
-                      contact@abdulrehman.sbs
+                      mail@abdulrehman.sbs
                     </span>
                   </div>
                   <div className="flex items-center space-x-3 text-text-secondary">
                     <Mail className="h-5 w-5 text-neon-cyan" />
                     <span className="no-scrollbar overflow-y-scroll">
-                      abdulrehmanazizsheikh@gmail.com
+                      coderabdulrehman@gmail.com
                     </span>
                   </div>
                   <div className="flex items-center space-x-3 text-text-secondary">

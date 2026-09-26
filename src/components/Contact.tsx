@@ -122,13 +122,13 @@ export default function Contact() {
                 <p className="text-sm uppercase tracking-[0.25em] text-text-secondary mb-2">
                   Email
                 </p>
-                <p className="text-foreground font-semibold">contact@abdulrehman.sbs</p>
+                <p className="text-foreground font-semibold">mail@abdulrehman.sbs</p>
               </div>
               <div className="rounded-3xl bg-[#070707]/80 p-6 text-center lg:text-left">
                 <p className="text-sm uppercase tracking-[0.25em] text-text-secondary mb-2">
                   Gmail
                 </p>
-                <p className="text-foreground font-semibold">abdulrehmanazizsheikh@gmail.com</p>
+                <p className="text-foreground font-semibold">coderabdulrehman@gmail.com</p>
               </div>
               <div className="rounded-3xl bg-[#070707]/80 p-6 text-center lg:text-left">
                 <p className="text-sm uppercase tracking-[0.25em] text-text-secondary mb-2">

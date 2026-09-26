@@ -156,7 +156,7 @@ export default function Hero() {
             <Briefcase className="h-6 w-6" />
           </a>
           <a
-            href="mailto:abdulrehmanazizsheikh@gmail.com"
+            href="mailto:coderabdulrehman@gmail.com"
             className="text-text-secondary hover:text-neon-cyan transition-colors duration-300 hover:scale-110 transform"
           >
             <Mail className="h-6 w-6" />
