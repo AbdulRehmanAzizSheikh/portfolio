@@ -121,7 +121,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 relative bg-[#050505] overflow-hidden">
+    <section id="projects" className="py-20 relative overflow-hidden">
       {/* Background gradient effects */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />

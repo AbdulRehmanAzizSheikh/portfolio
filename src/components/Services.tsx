@@ -367,9 +367,7 @@ export default function Services() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://calendly.com/your-link"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:coderabdulrehman@gmail.com?subject=Book%20a%2015-min%20Call&body=Hi%20Abdul%20Rehman%2C%0A%0AI%27d%20like%20to%20book%20a%2015-minute%20call%20to%20discuss%20my%20project.%0A%0AProject%20idea%3A%0APreferred%20time%20(slot)%3A%0A%0AThanks%21"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/30 text-white font-medium hover:border-purple-500/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.2)] transition-all duration-300"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-calendar" aria-hidden="true">
