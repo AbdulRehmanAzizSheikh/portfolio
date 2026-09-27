@@ -160,21 +160,21 @@ function GradientBackground() {
             vec3 purple   = vec3(0.45, 0.15, 0.85);    // neon purple
             vec3 teal     = vec3(0.0, 0.5, 0.45);      // teal
 
-            vec3 color = mix(deep, cyan, wave1 * 0.35);
-            color = mix(color, purple, wave2 * 0.35);
-            color = mix(color, teal, wave3 * 0.18);
+            vec3 color = mix(deep, cyan, wave1 * 0.16);
+            color = mix(color, purple, wave2 * 0.16);
+            color = mix(color, teal, wave3 * 0.09);
 
             // Cursor influence
-            color += cyan * glow * 0.45;
-            color += purple * ring * glow * 0.30;
+            color += cyan * glow * 0.16;
+            color += purple * ring * glow * 0.10;
 
             // Subtle grid
             float grid = step(0.96, fract(uv.x * 40.0)) + step(0.96, fract(uv.y * 40.0));
-            color += vec3(grid * 0.04);
+            color += vec3(grid * 0.025);
 
-            // Vignette (soft)
-            float vignette = 1.0 - distance(uv, vec2(0.5)) * 0.75;
-            color *= vignette;
+            // Vignette
+            float vignette = 1.0 - distance(uv, vec2(0.5)) * 1.1;
+            color *= max(vignette, 0.25);
 
             gl_FragColor = vec4(color, 1.0);
           }
@@ -212,8 +212,8 @@ function ServicesBackground3D() {
         <fog attach="fog" args={["#0a0a0a", 6, 34]} />
 
         <GradientBackground />
-        <ParticleField count={1800} color="#00ffff" size={0.07} opacity={0.75} radius={30} />
-        <ParticleField count={1200} color="#a855f7" size={0.09} opacity={0.6} radius={34} />
+        <ParticleField count={1800} color="#00ffff" size={0.065} opacity={0.55} radius={30} />
+        <ParticleField count={1200} color="#a855f7" size={0.085} opacity={0.42} radius={34} />
         <PointerLerp />
         <CameraRig />
 
@@ -224,9 +224,10 @@ function ServicesBackground3D() {
         <pointLight position={[10, -5, -10]} intensity={0.4} color="#a855f7" decay={2} />
       </Canvas>
 
-      {/* Soft overlays — text readable rahe, background bhi dikhe */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-[#0a0a0a]/40 pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_55%,rgba(10,10,10,0.85)_100%)] pointer-events-none" />
+      {/* Dim + readability overlays — background dikhe bhi aur text readable bhi */}
+      <div className="absolute inset-0 bg-[#0a0a0a]/40 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-[#0a0a0a]/30 pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_45%,rgba(10,10,10,0.9)_100%)] pointer-events-none" />
     </div>
   );
 }
