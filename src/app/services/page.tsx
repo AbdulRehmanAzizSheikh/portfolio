@@ -29,7 +29,9 @@ export default function ServicesPage() {
       style={{ overflowX: "hidden" }}
       className="flex min-h-screen flex-col bg-[#0a0a0a] selection:bg-neon-cyan/30 selection:text-white"
     >
-      <Services />
+      <div className="w-full max-w-screen-2xl mx-auto">
+        <Services />
+      </div>
       <footer className="py-8 text-center border-t border-white/5 mt-20">
         <p className="text-text-secondary text-sm">
           Built with Next.js, Tailwind CSS & Framer Motion.
