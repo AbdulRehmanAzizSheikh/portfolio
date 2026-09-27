@@ -27,7 +27,7 @@ export default function ServicesPage() {
   return (
     <main
       style={{ overflowX: "hidden" }}
-      className="flex min-h-screen flex-col bg-[#0a0a0a] selection:bg-neon-cyan/30 selection:text-white"
+      className="flex min-h-screen flex-col selection:bg-neon-cyan/30 selection:text-white"
     >
       <Services />
       <footer className="py-8 text-center border-t border-white/5 mt-20">
