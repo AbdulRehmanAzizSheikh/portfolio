@@ -285,36 +285,48 @@ export default function Services() {
           <div className="max-w-4xl mx-auto relative px-2 sm:px-0">
             <div className="hidden min-[951px]:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-neon-purple via-neon-cyan to-neon-purple opacity-30 shadow-[0_0_10px_rgba(0,255,255,0.1)]" style={{ maskImage: "linear-gradient(to bottom, transparent, black 110px, black calc(100% - 110px), transparent)" }} />
             <div className="space-y-12">
-              {processSteps.map((step) => (
-                <motion.div
-                  key={step.step}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                  className="relative mb-16 last:mb-0 flex flex-col min-[951px]:flex-row items-start min-[951px]:items-center min-[951px]:flex-row-reverse text-left min-[951px]:text-right"
-                >
-                  <div className="hidden min-[951px]:block absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-20">
-                    <div className="w-3.5 h-3.5 rounded-full border-2 bg-background relative border-neon-purple shadow-[0_0_12px_#A855F7]">
-                      <div className="absolute inset-0.5 rounded-full animate-pulse bg-neon-purple" />
-                    </div>
-                  </div>
-                  <div className="w-full min-[951px]:w-[45%] min-[951px]:pr-12">
-                    <div className="glassmorphism p-6 sm:p-8 rounded-2xl relative group hover:border-transparent transition-all duration-500 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      <div className="flex flex-wrap justify-between items-start gap-4 mb-5 min-[951px]:flex-row-reverse">
-                        <div className="flex items-center space-x-3 min-[951px]:flex-row-reverse min-[951px]:space-x-reverse">
-                          <div className="p-3 rounded-xl bg-[#111111] shadow-inner shadow-white/5 shrink-0">
-                            <span className="text-2xl font-bold text-neon-cyan">{step.step}</span>
-                          </div>
-                          <h4 className="text-xl font-bold text-foreground leading-tight">{step.title}</h4>
-                        </div>
+              {processSteps.map((step, index) => {
+                // Alternating zigzag: step 1 left, step 2 right, step 3 left...
+                const isLeft = index % 2 === 0;
+                return (
+                  <motion.div
+                    key={step.step}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className={`relative mb-16 last:mb-0 flex flex-col min-[951px]:flex-row items-start min-[951px]:items-center ${
+                      isLeft
+                        ? "text-left"
+                        : "text-left min-[951px]:flex-row-reverse min-[951px]:text-right"
+                    }`}
+                  >
+                    <div className="hidden min-[951px]:block absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-20">
+                      <div className="w-3.5 h-3.5 rounded-full border-2 bg-background relative border-neon-purple shadow-[0_0_12px_#A855F7]">
+                        <div className="absolute inset-0.5 rounded-full animate-pulse bg-neon-purple" />
                       </div>
-                      <p className="text-text-secondary">{step.desc}</p>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                    <div
+                      className={`w-full min-[951px]:w-[45%] ${
+                        isLeft ? "min-[951px]:pr-12" : "min-[951px]:pl-12"
+                      }`}
+                    >
+                      <div className="glassmorphism p-6 sm:p-8 rounded-2xl relative group hover:border-transparent transition-all duration-500 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className={`flex flex-wrap justify-between items-start gap-4 mb-5 ${isLeft ? "" : "min-[951px]:flex-row-reverse"}`}>
+                          <div className={`flex items-center space-x-3 ${isLeft ? "" : "min-[951px]:flex-row-reverse min-[951px]:space-x-reverse"}`}>
+                            <div className="p-3 rounded-xl bg-[#111111] shadow-inner shadow-white/5 shrink-0">
+                              <span className="text-2xl font-bold text-neon-cyan">{step.step}</span>
+                            </div>
+                            <h4 className="text-xl font-bold text-foreground leading-tight">{step.title}</h4>
+                          </div>
+                        </div>
+                        <p className="text-text-secondary">{step.desc}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </div>
