@@ -16,6 +16,7 @@ import {
   Rocket,
   ShoppingCart,
 } from "lucide-react";
+import ServicesBackground3D from "./ServicesBackground3D";
 
 const services = [
   {
@@ -201,11 +202,8 @@ const faqs = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 relative bg-[#050505] overflow-hidden">
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
-      </div>
+    <section id="services" className="py-20 relative overflow-hidden">
+      <ServicesBackground3D />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
