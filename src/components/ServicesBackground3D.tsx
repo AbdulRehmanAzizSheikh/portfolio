@@ -158,8 +158,12 @@ function GradientBackground() {
 
 // Main background component
 function ServicesBackground3D() {
+  // Debug: render a visible test element
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden">
+    <div className="fixed inset-0 -z-10 overflow-hidden bg-gradient-to-br from-cyan-500/10 via-transparent to-purple-500/10">
+      <div className="absolute inset-0 flex items-center justify-center text-cyan-400/50 text-2xl font-mono">
+        3D Background Loading...
+      </div>
       <Canvas
         camera={{ position: [0, 0, 8], fov: 50 }}
         style={{ width: "100%", height: "100%" }}
