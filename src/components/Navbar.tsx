@@ -75,7 +75,7 @@ export default function Navbar() {
         scrolled ? "glassmorphism py-4" : "bg-transparent py-6"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-8 sm:px-10 lg:px-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
             <a
@@ -87,7 +87,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-5 xl:gap-7">
             {navLinks.map((link) => {
               const isActive = activeSection === link.section;
               return (
@@ -106,14 +106,14 @@ export default function Navbar() {
             })}
             <a
               href="/#contact"
-              className="px-4 py-2 rounded-full bg-neon-cyan text-black font-semibold neon-glow-cyan-hover transition-all duration-300"
+              className="px-4 py-2 rounded-full bg-neon-cyan text-black font-semibold neon-glow-cyan-hover transition-all duration-300 whitespace-nowrap"
             >
               Contact Us
             </a>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-foreground hover:text-neon-cyan focus:outline-none"
@@ -134,7 +134,7 @@ export default function Navbar() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden glassmorphism mt-2 pb-4 px-4 space-y-2 rounded-b-xl"
+          className="lg:hidden glassmorphism mt-2 pb-4 px-4 space-y-2 rounded-b-xl"
         >
           {navLinks.map((link) => {
             const isActive = activeSection === link.section;
