@@ -5,13 +5,13 @@ import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Services", href: "/services" },
-  { name: "Education", href: "#education" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/#home", section: "home" },
+  { name: "About", href: "/#about", section: "about" },
+  { name: "Skills", href: "/#skills", section: "skills" },
+  { name: "Projects", href: "/#projects", section: "projects" },
+  { name: "Services", href: "/services", section: "services" },
+  { name: "Education", href: "/#education", section: "education" },
+  { name: "Contact", href: "/#contact", section: "contact" },
 ];
 
 export default function Navbar() {
@@ -79,7 +79,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
             <a
-              href="#home"
+              href="/#home"
               className="text-3xl font-bold text-foreground neon-text-cyan flex items-center"
             >
               <img className="w-10 h-10" src="favicon.ico" alt="A" />
@@ -89,7 +89,7 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => {
-              const isActive = activeSection === link.href.substring(1);
+              const isActive = activeSection === link.section;
               return (
                 <a
                   key={link.name}
@@ -105,7 +105,7 @@ export default function Navbar() {
               );
             })}
             <a
-              href="#contact"
+              href="/#contact"
               className="px-4 py-2 rounded-full bg-neon-cyan text-black font-semibold neon-glow-cyan-hover transition-all duration-300"
             >
               Contact Us
@@ -137,7 +137,7 @@ export default function Navbar() {
           className="md:hidden glassmorphism mt-2 pb-4 px-4 space-y-2 rounded-b-xl"
         >
           {navLinks.map((link) => {
-            const isActive = activeSection === link.href.substring(1);
+            const isActive = activeSection === link.section;
             return (
               <a
                 key={link.name}

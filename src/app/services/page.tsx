@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import Services from "@/components/Services";
 
 export const metadata = {
@@ -29,6 +30,7 @@ export default function ServicesPage() {
       style={{ overflowX: "hidden" }}
       className="flex min-h-screen flex-col selection:bg-neon-cyan/30 selection:text-white"
     >
+      <Navbar />
       <Services />
       <footer className="py-8 text-center border-t border-white/5 mt-20">
         <p className="text-text-secondary text-sm">
