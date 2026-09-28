@@ -134,7 +134,7 @@ export default function Navbar() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          className="lg:hidden glassmorphism mt-2 pb-4 px-4 space-y-2 rounded-b-xl"
+          className="lg:hidden mt-2 pb-4 px-4 space-y-2 rounded-b-xl bg-[#0d0d0d]/95 backdrop-blur-md border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.5)]"
         >
           {navLinks.map((link) => {
             const isActive = activeSection === link.section;
