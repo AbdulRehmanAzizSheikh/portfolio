@@ -9,11 +9,11 @@ export default function Education() {
     {
       institution: "Saylani Mass IT Training (SMIT)",
       course: "Modern Web Application Development",
-      duration: "Feb 2025 – Present",
-      status: "In Progress",
+      duration: "Feb 2025 – Jul 2026",
+      status: "Completed",
       statusColor:
-        "text-amber-400 font-semibold drop-shadow-[0_0_8px_rgba(251,191,36,0.8)]",
-      statusBorder: "border-amber-400/40",
+        "text-green-400 font-semibold drop-shadow-[0_0_8px_rgba(74,222,128,0.8)]",
+      statusBorder: "border-green-400/40",
       icon: <FaUserGraduate className="h-6 w-6 text-neon-purple shrink-0" />,
     },
     {
